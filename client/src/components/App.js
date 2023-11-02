@@ -1,10 +1,33 @@
 import '../styles/App.css';
 
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+
+/* Import components */
+import Main from './Main'
+import Quiz from './Quiz'
+import Result from './Result'
+
+/* React routes */
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Main></Main>
+  },
+  {
+    path: '/quiz',
+    element: <Quiz></Quiz>
+  },
+  {
+    path: '/result',
+    element: <Result></Result>
+  },
+])
+
 function App() {
   return (
-    <div className="App">
-      <h1>React App</h1>
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 
