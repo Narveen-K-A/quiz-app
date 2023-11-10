@@ -18,7 +18,7 @@ export default function Main() {
         <input ref={inputRef} className="userid" type="text" placeholder="Username" />
       </form>
       <div className="start">
-        <Link className="btn" to={"quiz"}>
+        <Link className="btn" to={'quiz'}>
           Start Quiz
         </Link>
       </div>
