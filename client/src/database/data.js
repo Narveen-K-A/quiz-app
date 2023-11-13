@@ -50,3 +50,5 @@ export default [
     options: ["variable carName", "var carName", "v carName"],
   },
 ];
+
+export const answers = [0, 1, 2, 2, 2, 2, 1, 0, 1, 1]
