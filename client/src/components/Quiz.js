@@ -17,7 +17,6 @@ export default function Quiz() {
   const dispatch = useDispatch();
 
   function onNext() {
-    console.log("On next click");
     if (trace < queue.length) {
       /* Update the trace value by one */
       dispatch(MoveNextQuestion());
@@ -27,10 +26,12 @@ export default function Quiz() {
         dispatch(PushAnswer(check));
       }
     }
+
+    /* Reset the value to undefined */
+    setChecked(undefined)
   }
 
   function onPrev() {
-    console.log("On previous click");
     if (trace > 0) {
       /* Update the trace value by minus one */
       dispatch(MovePrevQuestion());
